@@ -83,7 +83,7 @@ def add_registro():
                 return jsonify(results)   
   
             else:
-                img = request.files['']
+                img = None
                 preprocessed_image = preprocess_image(img)  
                 predictions = model.predict(np.expand_dims(preprocessed_image, axis=0))   
                 print("Predictions:", predictions)
